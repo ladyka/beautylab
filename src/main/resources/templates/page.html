@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title th:text="${beautyTitle}">TITLE | BeautyLab</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link type="text/css" href="StyleSheets/ModuleStyleSheets.css" rel="StyleSheet"/>
+    <script type="text/javascript">var jslang = 'EN';</script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Prata|Open+Sans:300italic,400italic,600italic,700italic,400,600,300,700"
+          rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive/foundation.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascripts/responsive/plugins.js"></script>
+    <script src="javascripts/responsive/setup.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content=""/>
+    <meta name="google-site-verification" content="setmeh5JFk5g9wH7hqef0QSvA6hrzotz3JTOiflWQMN3A0Kw"/>
+    <meta name="description"
+          content="Luxury Vegan Handbags - We provide PETA approved vegan designer bags for sale in Australia and USA. Explore our range online at uo.com.au."/>
+</head>
+<body data-pagename="">
+
+<div id="viewport">
+    <div id="screen">
+        <header id="header" class="sticky">
+            <section class="row">
+                <div id="logo"
+                     class="small-6 small-offset-3 medium-4 medium-offset-0 large-3 large-offset-0 columns small-text-center medium-text-left">
+                    <a href="index.html"><img src="images/logo-new.png"
+                                              alt="Urban Originals – Handbags, Wallets &amp; Clutches"> </a>
+                </div>
+                <div id="header-search" class="hide-for-small medium-4 medium-offset-4 large-offset-6 large-2 columns">
+                    <form name="catproductsform28167" method="post"
+                          action="http://www.uo.com.au/Default.aspx?A=ProductSearch&amp;ID=/search-results">
+                        <div class="form">
+                            <div class="item disappear">
+                                <label for="CAT_ProductCatalogue"></label>
+                                <br/>
+                                <select class="cat_dropdown_small" id="CAT_ProductCatalogue"
+                                        name="CAT_ProductCatalogue">
+                                    <option value="-1">-- All Catalogs --</option>
+                                    <option value="145445">shop</option>
+                                    <option value="147958">---Accessories</option>
+                                    <option value="150703">------belts</option>
+                                    <option value="160505">------Cosmetic Bags</option>
+                                    <option value="151867">------Jewellery</option>
+                                    <option value="153832">------Scarves</option>
+                                    <option value="173776">------shoulder</option>
+                                    <option value="147966">---bags</option>
+                                    <option value="150705">------overnight</option>
+                                    <option value="150396">------shoulder</option>
+                                    <option value="150706">------tote</option>
+                                    <option value="150708">---clutches</option>
+                                    <option value="173775">------shoulder</option>
+                                    <option value="150397">---latest arrivals</option>
+                                    <option value="147959">---sale</option>
+                                    <option value="147962">---wallets</option>
+                                    <option value="150707">------purses</option>
+                                    <option value="173777">------shoulder</option>
+                                    <option value="150704">------travel</option>
+                                </select>
+                            </div>
+                            <div class="item">
+
+
+                                <input placeholder="search" class="cat_textbox_small" type="text" id="CAT_ProductSearch"
+                                       name="CAT_ProductSearch" maxlength="255"/>
+
+                                <button type="submit" value="Search"><span class="fa fa-search"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="header-cart"
+                     class="small-3 medium-4 medium-offset-4 large-1 large-offset-0 columns medium-text-right">
+                    <div id="catCartSummary" data-quote="False" data-vertical="False"
+                         data-templateName="/Layouts/OnlineShop/cart-summary.tpl"
+                         data-templateHash="mecUi3WMrL019BgwA3YGw6Bm+n4=">
+                        <div class="text-right" id="cart-empty-1">
+                            <div class="cart-summary empty-1">
+                                <div class="cart-summary-item">
+                                    <a href="OrderRetrievev2.aspx.html">
+      <span class="cart-icon-count shopping-bag">
+      <span class="fa fa-shopping-cart"></span><span class="cart-text"> Cart</span>
+      <span class="cart-summary-item-count"> (0)</span>
+      </span></a>
+                                </div>
+                            </div>
+                            <div class="cart-summary not-empty-1">
+                                <div class="cart-summary-item" id="cart-not-empty">
+                                    <a class="cart-summary-link shopping-bag"
+                                       href="OrderRetrievev2.aspx%3FCatalogueID=0.html" title="$0.00">
+        <span class="cart-icon-count">
+      <span class="fa fa-shopping-cart"></span><span class="cart-text"> Cart</span>
+        <span class="cart-summary-item-count"> (0)</span>
+        </span>
+                                        <span class="cart-amount hide-for-large-down">$0.00
+      </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <nav id="main-nav" class="hide-for-small medium-10 medium-end large-7 large-pull-2 columns">
+                    <div class="h-nav">
+                        <div id="myMenu1">
+                            <ul>
+                                <li th:each="page,iterStat : ${headerMenus}">
+                                    <!--<span th:text="${pa}"/>&lt;!&ndash;This will print the index value&ndash;&gt;-->
+                                    <!--<span th:text="${iterStat.index}"/>&lt;!&ndash;This will print the Index&ndash;&gt;-->
+                                    <a th:text="${page.title}"
+                                       th:href="${page.path}">TITLE LINK 1</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- the following script is needed to set the selected state -->
+                        <script type="text/javascript">
+                            function catSetSelectedCSSItem(menuid) {
+                                var _host = document.location.host;
+                                var _url = document.location.href.substring(document.location.href.indexOf(_host) + _host.length).toLowerCase();
+                                var _anchor;
+                                var _parent;
+                                var _class;
+                                var _image;
+                                var _anchors = document.getElementById(menuid).getElementsByTagName('a');
+
+                                var ie = false;
+                                var detect = navigator.userAgent.toLowerCase();
+                                if (detect.indexOf('msie') > 0) ie = true;
+
+                                if (_url.indexOf('?') != -1) _url = _url.substring(0, _url.indexOf('?')); // must remove query variables
+
+                                for (var i = 0; i < _anchors.length; i++) {
+                                    _anchor = _anchors[i].href.substring(document.location.href.indexOf(_host) + _host.length).toLowerCase();
+                                    if (_anchor == _url) {
+                                        _image = _anchors[i].getAttribute('selimg'); // sel img is on anchor
+                                        if (_image)
+                                            _anchors[i].style.background = "url(" + _image + ")";
+                                        _parent = _anchors[i].parentNode; // get li node
+                                        while (_parent) {
+                                            if (_parent.id == menuid) break; // don't go up infinitely
+                                            if (_parent.tagName == "LI") {
+                                                _class = _parent.getAttribute('selcss'); // sel css is on li
+                                                if (_class)
+                                                    _parent.className = _class;
+                                                else { // logic below as per partner req't
+                                                    if (ie) {
+                                                        var ver = getInternetExplorerVersion();
+                                                        if (ver > -1) {
+                                                            if (ver >= 8.0)
+                                                                _class = _parent.getAttribute('class');
+                                                            else
+                                                                _class = _parent.getAttribute('className');
+                                                        }
+                                                    }
+                                                    else
+                                                        _class = _parent.getAttribute('class');
+
+                                                    if (_class)
+                                                        _parent.className = _class + " selected";
+                                                    else
+                                                        _parent.className = "selected";
+                                                    //when you mouse over the selected class get removed. fix..
+                                                    _parent.onmouseout = function (val) {
+                                                        return function () {
+                                                            if (val)
+                                                                this.className = val + " selected";
+                                                            else
+                                                                this.className = "selected";
+                                                        }
+                                                    }(_class);
+
+                                                }
+                                            }
+                                            _parent = _parent.parentNode;
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+
+                            function getInternetExplorerVersion() {
+                                var rv = -1; // Return value assumes failure.
+                                if (navigator.appName == 'Microsoft Internet Explorer') {
+                                    var ua = navigator.userAgent;
+                                    var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat(RegExp.$1);
+                                }
+                                return rv;
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            // ids need to be unique per page, use different ones if you are including multiple menus in the same page
+                            // id of the nav tag, used above
+                            var divTagId = "myMenu1";
+
+                            // desired id for 1st <ul> tag
+                            var ulTagId = "myMenu1List";
+
+                            // desired class for 1st <ul> tag
+                            var ulTagClass = "";
+
+                            if ((null !== ulTagId) && ("" !== ulTagId)) {
+                                document.getElementById(divTagId).getElementsByTagName("ul")[0].setAttribute("id", ulTagId);
+                            }
+                            if ((null !== ulTagClass) && ("" !== ulTagClass)) {
+                                document.getElementById(divTagId).getElementsByTagName("ul")[0].className = ulTagClass;
+                            }
+
+                            // this will set the selected state
+                            if ((null !== ulTagId) && ("" !== ulTagId)) {
+                                catSetSelectedCSSItem(ulTagId);
+                            }
+                        </script>
+
+                        <!--
+                        For a sample CSS menu:
+                        1. download the archive from http://lwis.net/free-css-drop-down-menu/
+                        2. unpack the css files in your site
+                        3. set the ulTagClass above to
+                            var ulTagClass = "dropdown dropdown-horizontal";
+                        4. uncomment the following
+                        5. if necessary, correct the path to reflect the files' location in your site
+                        -->
+                        <!--
+                        <link href="/css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+                        <link href="/css/dropdown/themes/default/default.css" media="screen" rel="stylesheet" type="text/css" />
+                        <style>
+                        ul.dropdown li.selected>a{
+                            border-bottom: 1px solid #000000;
+                        }
+                        </style>
+                        --> </div>
+                </nav>
+            </section>
+        </header>
+        <main id="content">
+            <section class="row" id="page">
+                <div class="small-12 columns" id="page-content">
+                    <span th:utext="${text}" th:remove="tag">TEXT TEXT</span>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <footer id="footer-top">
+                <section class="row">
+                    <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns small-text-center medium-text-right"
+                         id="newsletter-link">
+                        <p><a id="subscribe_link" href="about.html#subscribe_box" data-reveal-id="subscribe_box"
+                              title="Subscribe to Newsletter">subscribe to newsletter</a>
+                        </p>
+                        <div class="disappear">
+                            <div id="subscribe_box" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle"
+                                 aria-hidden="true" role="dialog">
+                                <div style="position: relative;">
+                                    <div class="bulle"></div>
+                                    <h3 id="modalTitlel">Join our Newsletter</h3>
+                                    <p>Enter your email below to join our newsletter and receive the latest news from
+                                        Urban Originals</p>
+                                    <!--
+                                <form name="catwebformform37133" method="post" onsubmit="return checkWholeForm37133(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=40261&amp;OID=5640346&amp;OTYPE=1&amp;EID=0&amp;CID=0&amp;OPTIN=True&amp;SAR=False&amp;PageID=/thankyou/subscription-confirmed.html">
+                                    <span class="req">* Required</span>
+                                    <div class="item">
+                                    <input type="text" name="FirstName" id="FirstName" class="cat_textbox" maxlength="255" value="First Name*" onblur="if(this.value=='') this.value='First Name*';" onfocus="if(this.value=='First Name*') this.value='';" />
+                                    </div>
+                                    <div class="item">
+                                    <input type="text" name="LastName" id="LastName" class="cat_textbox" maxlength="255" value="Last Name*" onblur="if(this.value=='') this.value='Last Name*';" onfocus="if(this.value=='Last Name*') this.value='';" />
+                                    </div>
+                                    <div class="item">
+                                    <input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" value="Email*" onblur="if(this.value=='') this.value='Email*';" onfocus="if(this.value=='Email*') this.value='';" />
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="item_noBorder" style="display: none;">
+                                    <input type="checkbox" name="CampaignList_48470" checked="true" />
+                                    Join our newsletter </div>
+                                    <input class="cat_button" type="submit" value="Submit" id="catwebformbutton" />
+                                    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                                    <script type="text/javascript">
+                                //<![CDATA[
+                                var submitcount37133 = 0;function checkWholeForm37133(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if(why != ""){alert(why);return false;}if(submitcount37133 == 0){submitcount37133++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+                                //]]>
+                                </script>
+                                </form>
+
+                                -->
+                                    <!-- Begin MailChimp Signup Form -->
+                                    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css"
+                                          rel="stylesheet" type="text/css">
+                                    <form action="http://www.us4.list-manage.com/subscribe/post?u=5ef4bfde83131f648b7602437&amp;id=66c1cf0d31"
+                                          method="post" id="mc-embedded-subscribe-form"
+                                          name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        <div class="item">
+                                            <label for="mce-FNAME">First Name </label>
+                                            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                        </div>
+                                        <div class="item">
+                                            <label for="mce-LNAME">Last Name </label>
+                                            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                        </div>
+                                        <div class="item">
+                                            <label for="mce-EMAIL disappear">Subscribe to our mailing list</label>
+                                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                                   placeholder="email address" required>
+
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                <input type="text" name="b_5ef4bfde83131f648b7602437_66c1cf0d31"
+                                                       tabindex="-1" value="">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="clear">
+                                                <input type="submit" value="Subscribe" name="subscribe"
+                                                       id="mc-embedded-subscribe" class="button cat_button">
+                                            </div>
+                                        </div>
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>
+                                    </form>
+                                    <!--End mc_embed_signup-->
+                                </div>
+                                <a class="close_subscribe close-reveal-modal no-scroll" href="about.html#subscribe_box"><img
+                                        src="images/cross-new.jpg"></a>
+                            </div>
+                            <script type='text/javascript'
+                                    src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                            <script type='text/javascript'>
+                                (function ($) {
+                                    window.fnames = new Array();
+                                    window.ftypes = new Array();
+                                    fnames[0] = 'EMAIL';
+                                    ftypes[0] = 'email';
+                                    fnames[1] = 'FNAME';
+                                    ftypes[1] = 'text';
+                                    fnames[2] = 'LNAME';
+                                    ftypes[2] = 'text';
+                                }(jQuery));
+                                var $mcj = jQuery.noConflict(true);
+                            </script>
+                            <script>
+                                $(window).load(function () {
+
+                                    //using Foundation.reveal instead
+
+
+                                    // jQuery('#subscribe_link').click(function(){
+                                    //  jQuery('#subscribe_box').css('display','block')
+                                    // });
+                                    // jQuery('.close_subscribe').click(function(){
+                                    //  jQuery('#subscribe_box').css('display','none')
+                                    // });
+                                    var firstVisitMessage = $.cookie('FirstVisit');
+                                    //console.log(firstVisitMessage);
+
+                                    if (firstVisitMessage === null && window.location.protocol !== "https:") { //this works better, I think!
+                                        //if (firstVisitMessage !== 'hide') {
+                                        $("#subscribe_link").trigger('click');
+                                        $.cookie('FirstVisit', 'hide', {
+                                            expires: 7,
+                                            path: '/'
+                                        });
+                                    }
+                                    else {
+
+                                    }
+
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="small-8 small-centered medium-3 medium-uncentered end large-2 columns text-center"
+                         id="footer-social">
+                        <ul class="small-block-grid-4">
+                            <li><a href="http://www.facebook.com/pages/Urban-Originals/10150092210335521"
+                                   target="_blank" title="Follow Urban Originals on Facebook"><span
+                                    class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/UrbanOriginals" target="_blank"><span class="fa fa-twitter"
+                                                                                                   title="Follow Urban Originals on Twitter"></span></a>
+                            </li>
+                            <li><a href="http://instagram.com/urbanoriginals" target="_blank"><span
+                                    class="fa fa-instagram" title="Follow Urban Originals on Instagram"></span></a></li>
+                            <li><a href="http://pinterest.com/urbanoriginals/" target="_blank"><span
+                                    class="fa fa-pinterest" title="Follow Urban Originals on Pinterest"></span></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </footer>
+            <footer id="footer-bottom">
+                <section class="row">
+                    <nav class="small-12 columns text-center" id="footer-nav">
+                        <div class="h-nav">
+                            <div>
+                                <ul>
+                                    <li><a href="about.html" title="PETA Approved Vegan Designer Handbags">About</a>
+                                    </li>
+                                    <li><a href="customer-care.html" title="Customer Care">Customer Care</a>
+                                    </li>
+                                    <li><a href="returns-exchanges.html" title="Returns and Exchanges">Returns &amp;
+                                        Exchanges</a>
+                                    </li>
+                                    <li><a href="delivery.html" title="Delivery Info ">Delivery Info</a>
+                                    </li>
+                                    <li><a href="contact-us.html" title="Contact Us">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+                <section class="row">
+                    <div class="medium-6 medium-centered columns small-text-center"><p>&copy;2015 Urban Originals / UO&#8482;
+                        &amp; Urban Originals&#8482; | <a href="terms-and-conditions.html" title="Terms">Terms</a> | <a
+                                href="http://www.uo.com.au/privacy" title="Privacy Policy">Privacy Policy</a></p>
+                        <div>&nbsp;</div>
+                    </div>
+                </section>
+            </footer>
+        </footer>
+    </div>
+</div>
+<script src="javascripts/responsive/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
