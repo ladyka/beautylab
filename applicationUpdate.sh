@@ -1,6 +1,9 @@
 #!/bin/bash
-cd /home/appuser/beautylab;
-APPLICATION_PACKAGE="by.havefun.beautylab";
+COMPANY_PACKAGE="by.havefun";
+APPLICATION_NAME="beautylab";
+APPLICATION_PACKAGE=${COMPANY_PACKAGE}"."${APPLICATION_NAME};
+
+cd /home/appuser/${APPLICATION_NAME};
 COMMIT=$(git log --pretty=format:'%h' -n 1);
 git pull;
 COMMIT_NEW=$(git log --pretty=format:'%h' -n 1);
@@ -10,7 +13,7 @@ function buildAndStartApplication {
     rm -rf build;
     ./gradlew bootRepackage;
     ls build/libs;
-    java -jar  build/libs/possystem*.jar;
+    java -jar  build/libs/${APPLICATION_NAME}*.jar;
 }
 
 if [ "$COMMIT" == "$COMMIT_NEW" ]; then
@@ -32,8 +35,8 @@ else
     fi
 
     #backup
-    #FILE_NAME="beautylab-"$(date +%Y)-$(date +%m)-$(date +%d)_$(date +%H)-$(date +%M)-$(date +%S)".sql";
-    #mysqldump -u andreiuser -pQX3M6IbCMCL andrei >> /backup/beautylab/$FILE_NAME
+    #FILE_NAME="${APPLICATION_NAME}-"$(date +%Y)-$(date +%m)-$(date +%d)_$(date +%H)-$(date +%M)-$(date +%S)".sql";
+    #mysqldump -u andreiuser -pQX3M6IbCMCL andrei >> /backup/${APPLICATION_NAME}/$FILE_NAME
 
 	#run
 	echo "Application start";
