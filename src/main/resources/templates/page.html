@@ -22,9 +22,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="description" content=""/>
-    <meta name="google-site-verification" content="setmeh5JFk5g9wH7hqef0QSvA6hrzotz3JTOiflWQMN3A0Kw"/>
+    <meta name="google-site-verification" content="NONE"/>
     <meta name="description"
-          content="Luxury Vegan Handbags - We provide PETA approved vegan designer bags for sale in Australia and USA. Explore our range online at uo.com.au."/>
+          content="Веб сайт парикмахерской Надежды Пукелло."/>
 </head>
 <body data-pagename="">
 
@@ -34,8 +34,8 @@
             <section class="row">
                 <div id="logo"
                      class="small-6 small-offset-3 medium-4 medium-offset-0 large-3 large-offset-0 columns small-text-center medium-text-left">
-                    <a href="index.html"><img src="images/logo-new.png"
-                                              alt="Urban Originals – Handbags, Wallets &amp; Clutches"> </a>
+                    <a href="/"><img src="images/logo-new.png"
+                                     alt="Urban Originals – Handbags, Wallets &amp; Clutches"> </a>
                 </div>
                 <div id="header-search" class="hide-for-small medium-4 medium-offset-4 large-offset-6 large-2 columns">
                     <form name="catproductsform28167" method="post"
@@ -116,10 +116,8 @@
                         <div id="myMenu1">
                             <ul>
                                 <li th:each="page,iterStat : ${headerMenus}">
-                                    <!--<span th:text="${pa}"/>&lt;!&ndash;This will print the index value&ndash;&gt;-->
-                                    <!--<span th:text="${iterStat.index}"/>&lt;!&ndash;This will print the Index&ndash;&gt;-->
-                                    <a th:text="${page.title}"
-                                       th:href="${page.path}">TITLE LINK 1</a>
+                                    <a th:text="${page.title}" th:href="'/?page='+${page.path}"
+                                    >TITLE LINK 1</a>
                                 </li>
                             </ul>
                         </div>
@@ -259,7 +257,7 @@
                 <section class="row">
                     <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns small-text-center medium-text-right"
                          id="newsletter-link">
-                        <p><a id="subscribe_link" href="about.html#subscribe_box" data-reveal-id="subscribe_box"
+                        <p><a id="subscribe_link" href="#subscribe_box" data-reveal-id="subscribe_box"
                               title="Subscribe to Newsletter">subscribe to newsletter</a>
                         </p>
                         <div class="disappear">
@@ -406,16 +404,9 @@
                         <div class="h-nav">
                             <div>
                                 <ul>
-                                    <li><a href="about.html" title="PETA Approved Vegan Designer Handbags">About</a>
-                                    </li>
-                                    <li><a href="customer-care.html" title="Customer Care">Customer Care</a>
-                                    </li>
-                                    <li><a href="returns-exchanges.html" title="Returns and Exchanges">Returns &amp;
-                                        Exchanges</a>
-                                    </li>
-                                    <li><a href="delivery.html" title="Delivery Info ">Delivery Info</a>
-                                    </li>
-                                    <li><a href="contact-us.html" title="Contact Us">Contact Us</a>
+                                    <li th:each="page,iterStat : ${footerMenus}">
+                                        <a th:text="${page.title}" th:href="'/?page='+${page.path}"
+                                        >TITLE LINK 1</a>
                                     </li>
                                 </ul>
                             </div>
@@ -423,9 +414,10 @@
                     </nav>
                 </section>
                 <section class="row">
-                    <div class="medium-6 medium-centered columns small-text-center"><p>&copy;2015 Urban Originals / UO&#8482;
-                        &amp; Urban Originals&#8482; | <a href="terms-and-conditions.html" title="Terms">Terms</a> | <a
-                                href="http://www.uo.com.au/privacy" title="Privacy Policy">Privacy Policy</a></p>
+                    <div class="medium-6 medium-centered columns small-text-center"><p>&copy;2017 BelYobaSoft&#8482;
+                        | <a href="/?page=terms-and-conditions" title="Terms">Terms</a> |
+                        <a
+                                href="/?page=privacy-policy" title="Privacy Policy">Privacy Policy</a></p>
                         <div>&nbsp;</div>
                     </div>
                 </section>

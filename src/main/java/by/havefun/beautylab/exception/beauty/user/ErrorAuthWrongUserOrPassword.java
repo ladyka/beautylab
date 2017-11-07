@@ -1,7 +1,7 @@
 package by.havefun.beautylab.exception.beauty.user;
 
 import by.havefun.beautylab.exception.BeautyLabException;
-import by.havefun.beautylab.exception.ColumbaExceptionType;
+import by.havefun.beautylab.exception.BeautyExceptionType;
 import org.springframework.http.HttpStatus;
 
 public class ErrorAuthWrongUserOrPassword extends BeautyLabException {
@@ -12,7 +12,7 @@ public class ErrorAuthWrongUserOrPassword extends BeautyLabException {
 				HttpStatus.BAD_REQUEST,
 				"Неверный логин или пароль",
 				"Необходимо повторить запрос с корректными данными.",
-				ColumbaExceptionType.SYSTEM
+				BeautyExceptionType.SYSTEM
 		);
 	}
 }

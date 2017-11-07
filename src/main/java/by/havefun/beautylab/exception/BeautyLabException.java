@@ -32,7 +32,7 @@ public class BeautyLabException extends Exception {
 	@Getter
 	@Setter
 	private String uuid;
-	protected BeautyLabException(Integer code, HttpStatus status, String desc, String descFix, ColumbaExceptionType type) {
+	protected BeautyLabException(Integer code, HttpStatus status, String desc, String descFix, BeautyExceptionType type) {
 		this.code = code;
 		this.httpCode = status.value();
 		this.desc = desc;

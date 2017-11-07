@@ -1,10 +1,10 @@
 package by.havefun.beautylab.exception;
 
-public enum  ColumbaExceptionType {
+public enum BeautyExceptionType {
 	SYSTEM("System"), APPLICATION("Application");
 	private String value;
 
-	ColumbaExceptionType(String value) {
+	BeautyExceptionType(String value) {
 		this.value = value;
 	}
 

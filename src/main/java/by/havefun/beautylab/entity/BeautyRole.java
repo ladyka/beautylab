@@ -14,7 +14,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "columba_role")
+@Table(name = "beauty_role")
 @EntityListeners(AuditingEntityListener.class)
 public class BeautyRole extends BeautyAbstractEntity implements GrantedAuthority {
 

@@ -19,7 +19,7 @@ import static java.lang.Boolean.TRUE;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "columba_user")
+@Table(name = "beauty_user")
 @EntityListeners(AuditingEntityListener.class)
 public class BeautyUser extends BeautyAbstractEntity implements UserDetails {
 

@@ -11,3 +11,12 @@ public class Application {
 		SpringApplication.run(new Class[]{Application.class, by.havefun.beautylab.config.Config.class}, args);
 	}
 }
+//
+//плохие проекты
+//Без изучения новых технология
+//кор джава
+//Рспределённые системы
+//тетрис написать
+//паттерны - повторить
+//
+//для 5 лет очень плохо

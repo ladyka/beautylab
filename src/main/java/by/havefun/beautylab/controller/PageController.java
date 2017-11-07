@@ -1,25 +1,26 @@
 package by.havefun.beautylab.controller;
 
-import org.springframework.http.ResponseEntity;
+import by.havefun.beautylab.dto.PageDto;
+import by.havefun.beautylab.service.PageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-
-import static by.havefun.beautylab.config.Config.DATE_TIME_PATTERN;
-import static java.lang.Boolean.TRUE;
 
 @Controller
-@RequestMapping(name = "/")
 public class PageController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "index";
+    @Autowired
+    private PageService pageService;
+
+    @RequestMapping(value = "/")
+    public String index(Model model, String page) {
+        page = (page == null) ? "index" : page;
+        final PageDto pageDto = pageService.getPage(page);
+        model.addAttribute("text", pageDto.getText());
+        model.addAttribute("beautyTitle", pageDto.getTitle());
+        model.addAttribute("headerMenus", pageService.getHeaders());
+        model.addAttribute("footerMenus", pageService.getFooters());
+        return "page";
     }
 }

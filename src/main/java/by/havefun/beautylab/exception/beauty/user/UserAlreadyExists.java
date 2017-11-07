@@ -1,12 +1,12 @@
 package by.havefun.beautylab.exception.beauty.user;
 
 import by.havefun.beautylab.exception.BeautyLabException;
-import by.havefun.beautylab.exception.ColumbaExceptionType;
+import by.havefun.beautylab.exception.BeautyExceptionType;
 import org.springframework.http.HttpStatus;
 
 public class UserAlreadyExists extends BeautyLabException {
 
 	public UserAlreadyExists() {
-		super(USER_ALREADY_EXISTS, HttpStatus.BAD_REQUEST, "Пользователь существует", "Придумайте другой логин", ColumbaExceptionType.APPLICATION);
+		super(USER_ALREADY_EXISTS, HttpStatus.BAD_REQUEST, "Пользователь существует", "Придумайте другой логин", BeautyExceptionType.APPLICATION);
 	}
 }
