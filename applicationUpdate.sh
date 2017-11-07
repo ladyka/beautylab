@@ -1,24 +1,28 @@
 #!/bin/bash
 cd /home/appuser/beautylab;
-
+APPLICATION_PACKAGE="by.havefun.beautylab";
 COMMIT=$(git log --pretty=format:'%h' -n 1);
 git pull;
 COMMIT_NEW=$(git log --pretty=format:'%h' -n 1);
+PID=$(ps -ef | grep ${APPLICATION_PACKAGE} | grep -v grep | awk '{ print $2 }')
+
+function buildAndStartApplication {
+    rm -rf build;
+    ./gradlew bootRepackage;
+    ls build/libs;
+    java -jar  build/libs/possystem*.jar;
+}
 
 if [ "$COMMIT" == "$COMMIT_NEW" ]; then
    echo "Have not updates! :("
-   PID=$(ps -ef | grep "by.havefun.beautylab" | grep -v grep | awk '{ print $2 }')
        if [ -z "$PID" ]
        then
        		echo "Application start";
-       		./gradlew bootRun
+       		buildAndStartApplication;
        else
        		echo "Application already ruining!"
        fi
 else
-
-	#stop
-    PID=$(ps -ef | grep "by.havefun.beautylab" | grep -v grep | awk '{ print $2 }')
     if [ -z "$PID" ]
     then
         echo "Application is already stopped"
@@ -33,7 +37,7 @@ else
 
 	#run
 	echo "Application start";
-    ./gradlew bootRun
+    buildAndStartApplication;
 fi
 
 #sendState
