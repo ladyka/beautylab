@@ -10,7 +10,7 @@
 
     <link type="text/css" href="StyleSheets/ModuleStyleSheets.css" rel="StyleSheet"/>
     <script type="text/javascript">var jslang = 'EN';</script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cssimport/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prata|Open+Sans:300italic,400italic,600italic,700italic,400,600,300,700"
           rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive/foundation.css">
@@ -258,70 +258,36 @@
                     <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns small-text-center medium-text-right"
                          id="newsletter-link">
                         <p><a id="subscribe_link" href="#subscribe_box" data-reveal-id="subscribe_box"
-                              title="Subscribe to Newsletter">subscribe to newsletter</a>
+                              title="Subscribe to Newsletter">Запиваться на сеанс</a>
                         </p>
                         <div class="disappear">
                             <div id="subscribe_box" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle"
                                  aria-hidden="true" role="dialog">
                                 <div style="position: relative;">
                                     <div class="bulle"></div>
-                                    <h3 id="modalTitlel">Join our Newsletter</h3>
-                                    <p>Enter your email below to join our newsletter and receive the latest news from
-                                        Urban Originals</p>
-                                    <!--
-                                <form name="catwebformform37133" method="post" onsubmit="return checkWholeForm37133(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=40261&amp;OID=5640346&amp;OTYPE=1&amp;EID=0&amp;CID=0&amp;OPTIN=True&amp;SAR=False&amp;PageID=/thankyou/subscription-confirmed.html">
-                                    <span class="req">* Required</span>
-                                    <div class="item">
-                                    <input type="text" name="FirstName" id="FirstName" class="cat_textbox" maxlength="255" value="First Name*" onblur="if(this.value=='') this.value='First Name*';" onfocus="if(this.value=='First Name*') this.value='';" />
-                                    </div>
-                                    <div class="item">
-                                    <input type="text" name="LastName" id="LastName" class="cat_textbox" maxlength="255" value="Last Name*" onblur="if(this.value=='') this.value='Last Name*';" onfocus="if(this.value=='Last Name*') this.value='';" />
-                                    </div>
-                                    <div class="item">
-                                    <input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" value="Email*" onblur="if(this.value=='') this.value='Email*';" onfocus="if(this.value=='Email*') this.value='';" />
-                                    </div>
-                                    <div class="clear"></div>
-                                    <div class="item_noBorder" style="display: none;">
-                                    <input type="checkbox" name="CampaignList_48470" checked="true" />
-                                    Join our newsletter </div>
-                                    <input class="cat_button" type="submit" value="Submit" id="catwebformbutton" />
-                                    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
-                                    <script type="text/javascript">
-                                //<![CDATA[
-                                var submitcount37133 = 0;function checkWholeForm37133(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if(why != ""){alert(why);return false;}if(submitcount37133 == 0){submitcount37133++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
-                                //]]>
-                                </script>
-                                </form>
-
-                                -->
+                                    <h3 id="modalTitlel">Запиваться на сеанс</h3>
+                                    <p>Введите ваше имя и телефон и мы обязательно перезвоним вам</p>
                                     <!-- Begin MailChimp Signup Form -->
-                                    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css"
+                                    <link href="cssimport/slim-10_7.css"
                                           rel="stylesheet" type="text/css">
-                                    <form action="http://www.us4.list-manage.com/subscribe/post?u=5ef4bfde83131f648b7602437&amp;id=66c1cf0d31"
+                                    <form action="/callme?fix=this"
                                           method="post" id="mc-embedded-subscribe-form"
                                           name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                         <div class="item">
-                                            <label for="mce-FNAME">First Name </label>
-                                            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                            <label for="mce-FNAME">Имя</label>
+                                            <input type="text" value="" name="fname" class="" id="mce-FNAME">
                                         </div>
                                         <div class="item">
-                                            <label for="mce-LNAME">Last Name </label>
-                                            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                            <label for="mce-LNAME">Фамилия</label>
+                                            <input type="text" value="" name="lname" class="" id="mce-LNAME">
                                         </div>
                                         <div class="item">
-                                            <label for="mce-EMAIL disappear">Subscribe to our mailing list</label>
-                                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-                                                   placeholder="email address" required>
-
-                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                <input type="text" name="b_5ef4bfde83131f648b7602437_66c1cf0d31"
-                                                       tabindex="-1" value="">
-                                            </div>
+                                            <label for="mce-LPHONE">Tелефон</label>
+                                            <input type="text" value="" name="mphone" class="" id="mce-LPHONE">
                                         </div>
                                         <div class="item">
                                             <div class="clear">
-                                                <input type="submit" value="Subscribe" name="subscribe"
+                                                <input type="submit" value="Записаться" name="subscribe"
                                                        id="mc-embedded-subscribe" class="button cat_button">
                                             </div>
                                         </div>
@@ -336,16 +302,16 @@
                                         src="images/cross-new.jpg"></a>
                             </div>
                             <script type='text/javascript'
-                                    src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                                    src='/jsimport/mc-validate.js'></script>
                             <script type='text/javascript'>
                                 (function ($) {
                                     window.fnames = new Array();
                                     window.ftypes = new Array();
                                     fnames[0] = 'EMAIL';
                                     ftypes[0] = 'email';
-                                    fnames[1] = 'FNAME';
+                                    fnames[1] = 'fname';
                                     ftypes[1] = 'text';
-                                    fnames[2] = 'LNAME';
+                                    fnames[2] = 'lname';
                                     ftypes[2] = 'text';
                                 }(jQuery));
                                 var $mcj = jQuery.noConflict(true);
@@ -384,16 +350,16 @@
                     <div class="small-8 small-centered medium-3 medium-uncentered end large-2 columns text-center"
                          id="footer-social">
                         <ul class="small-block-grid-4">
-                            <li><a href="http://www.facebook.com/pages/Urban-Originals/10150092210335521"
-                                   target="_blank" title="Follow Urban Originals on Facebook"><span
-                                    class="fa fa-facebook"></span></a></li>
-                            <li><a href="https://twitter.com/UrbanOriginals" target="_blank"><span class="fa fa-twitter"
-                                                                                                   title="Follow Urban Originals on Twitter"></span></a>
-                            </li>
-                            <li><a href="http://instagram.com/urbanoriginals" target="_blank"><span
-                                    class="fa fa-instagram" title="Follow Urban Originals on Instagram"></span></a></li>
-                            <li><a href="http://pinterest.com/urbanoriginals/" target="_blank"><span
-                                    class="fa fa-pinterest" title="Follow Urban Originals on Pinterest"></span></a></li>
+                            <!--<li><a href="http://www.facebook.com/pages/Urban-Originals/10150092210335521"-->
+                                   <!--target="_blank" title="Follow Urban Originals on Facebook"><span-->
+                                    <!--class="fa fa-facebook"></span></a></li>-->
+                            <!--<li><a href="https://twitter.com/UrbanOriginals" target="_blank"><span class="fa fa-twitter"-->
+                                                                                                   <!--title="Follow Urban Originals on Twitter"></span></a>-->
+                            <!--</li>-->
+                            <li><a href="https://www.instagram.com/beautylabnp/" target="_blank"><span
+                                    class="fa fa-instagram" title="Follow Nadya on Instagram"></span></a></li>
+                            <!--<li><a href="http://pinterest.com/urbanoriginals/" target="_blank"><span-->
+                                    <!--class="fa fa-pinterest" title="Follow Urban Originals on Pinterest"></span></a></li>-->
                         </ul>
                     </div>
                 </section>

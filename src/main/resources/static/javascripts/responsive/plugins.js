@@ -3552,8 +3552,6 @@ function css_browser_selector(u) {
 
         ]; // b
 
-    console.debug(ua);
-
     function screenSize() {
         var w = window.outerWidth || html.clientWidth;
         var h = window.outerHeight || html.clientHeight;
