@@ -9,4 +9,5 @@ public interface PageService {
     PageDto getPage(String pathOfPage);
     List<PageDto> getHeaders();
     List<PageDto> getFooters();
+    PageDto update(Long id, String path, String title, String text, Boolean topMenu, Boolean footerMenu);
 }

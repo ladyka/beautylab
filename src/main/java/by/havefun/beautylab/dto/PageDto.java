@@ -11,8 +11,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class PageDto {
     private Long id;
-    public  String path;
-    public  String title;
+    private String path;
+    private String title;
     private String text;
     private Boolean topMenu;
     private Boolean footerMenu;

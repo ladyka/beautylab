@@ -6,25 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title th:text="${beautyTitle}">TITLE | BeautyLab</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
-    <link type="text/css" href="StyleSheets/ModuleStyleSheets.css" rel="StyleSheet"/>
+    <link type="text/css" href="/StyleSheets/ModuleStyleSheets.css" rel="StyleSheet"/>
     <script type="text/javascript">var jslang = 'EN';</script>
     <link rel="stylesheet" href="/cssimport/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prata|Open+Sans:300italic,400italic,600italic,700italic,400,600,300,700"
           rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/responsive/foundation.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/responsive/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/responsive/foundation.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/responsive/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="javascripts/responsive/plugins.js"></script>
-    <script src="javascripts/responsive/setup.js"></script>
+    <script src="/javascripts/responsive/plugins.js"></script>
+    <script src="/javascripts/responsive/setup.js"></script>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="description" content=""/>
     <meta name="google-site-verification" content="NONE"/>
     <meta name="description"
           content="Веб сайт парикмахерской Надежды Пукелло."/>
+
+    <!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_editor.pkgd.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/css/froala_style.min.css" rel="stylesheet"
+          type="text/css"/>
+
 </head>
 <body data-pagename="">
 
@@ -34,7 +46,7 @@
             <section class="row">
                 <div id="logo"
                      class="small-6 small-offset-3 medium-4 medium-offset-0 large-3 large-offset-0 columns small-text-center medium-text-left">
-                    <a href="/"><img src="images/logo-new.png"
+                    <a href="/"><img src="/images/logo-new.png"
                                      alt="Urban Originals – Handbags, Wallets &amp; Clutches"> </a>
                 </div>
                 <div id="header-search" class="hide-for-small medium-4 medium-offset-4 large-offset-6 large-2 columns">
@@ -247,119 +259,43 @@
         </header>
         <main id="content">
             <section class="row" id="page">
+                <div class="form-data">
+                    <input id="saveData" type="button" value="Save">
+                    Путь к странице
+                    <input id="pathId" type="text" th:value="${path}">
+                    <input id="Id" type="hidden" th:value="${page.id}">
+                    Заголовок
+                    <input id="titleId" type="text" th:value="${page.title}">
+                    Отображать в верхнем меню
+                    <input id="topMenuId" type="checkbox" th:value="${page.topMenu}">
+                    Отображать в нижнем меню
+                    <input id="footerMenuId" type="checkbox" th:value="${page.footerMenu}">
+                </div>
                 <div class="small-12 columns" id="page-content">
-                    <span th:utext="${text}" th:remove="tag">TEXT TEXT</span>
+                    <div style="display: none" id="textSource" width="0" height="0ё">
+                        <span th:utext="${page.text}" th:remove="tag">TEXT TEXT</span>
+                    </div>
+                    <textarea id="textareaEditor"></textarea>
                 </div>
             </section>
+
         </main>
         <footer id="footer">
             <footer id="footer-top">
                 <section class="row">
-                    <div class="small-12 small-centered medium-4 medium-uncentered medium-offset-2 columns small-text-center medium-text-right"
-                         id="newsletter-link">
-                        <p><a id="subscribe_link" href="#subscribe_box" data-reveal-id="subscribe_box"
-                              title="Subscribe to Newsletter">Запиваться на сеанс</a>
-                        </p>
-                        <div class="disappear">
-                            <div id="subscribe_box" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle"
-                                 aria-hidden="true" role="dialog">
-                                <div style="position: relative;">
-                                    <div class="bulle"></div>
-                                    <h3 id="modalTitlel">Запиваться на сеанс</h3>
-                                    <p>Введите ваше имя и телефон и мы обязательно перезвоним вам</p>
-                                    <!-- Begin MailChimp Signup Form -->
-                                    <link href="cssimport/slim-10_7.css"
-                                          rel="stylesheet" type="text/css">
-                                    <form action="/callme?fix=this"
-                                          method="post" id="mc-embedded-subscribe-form"
-                                          name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                        <div class="item">
-                                            <label for="mce-FNAME">Имя</label>
-                                            <input type="text" value="" name="fname" class="" id="mce-FNAME">
-                                        </div>
-                                        <div class="item">
-                                            <label for="mce-LNAME">Фамилия</label>
-                                            <input type="text" value="" name="lname" class="" id="mce-LNAME">
-                                        </div>
-                                        <div class="item">
-                                            <label for="mce-LPHONE">Tелефон</label>
-                                            <input type="text" value="" name="mphone" class="" id="mce-LPHONE">
-                                        </div>
-                                        <div class="item">
-                                            <div class="clear">
-                                                <input type="submit" value="Записаться" name="subscribe"
-                                                       id="mc-embedded-subscribe" class="button cat_button">
-                                            </div>
-                                        </div>
-                                        <div id="mce-responses" class="clear">
-                                            <div class="response" id="mce-error-response" style="display:none"></div>
-                                            <div class="response" id="mce-success-response" style="display:none"></div>
-                                        </div>
-                                    </form>
-                                    <!--End mc_embed_signup-->
-                                </div>
-                                <a class="close_subscribe close-reveal-modal no-scroll" href="about.html#subscribe_box"><img
-                                        src="images/cross-new.jpg"></a>
-                            </div>
-                            <script type='text/javascript'
-                                    src='/jsimport/mc-validate.js'></script>
-                            <script type='text/javascript'>
-                                (function ($) {
-                                    window.fnames = new Array();
-                                    window.ftypes = new Array();
-                                    fnames[0] = 'EMAIL';
-                                    ftypes[0] = 'email';
-                                    fnames[1] = 'fname';
-                                    ftypes[1] = 'text';
-                                    fnames[2] = 'lname';
-                                    ftypes[2] = 'text';
-                                }(jQuery));
-                                var $mcj = jQuery.noConflict(true);
-                            </script>
-                            <script>
-                                $(window).load(function () {
-
-                                    //using Foundation.reveal instead
-
-
-                                    // jQuery('#subscribe_link').click(function(){
-                                    //  jQuery('#subscribe_box').css('display','block')
-                                    // });
-                                    // jQuery('.close_subscribe').click(function(){
-                                    //  jQuery('#subscribe_box').css('display','none')
-                                    // });
-                                    var firstVisitMessage = $.cookie('FirstVisit');
-                                    //console.log(firstVisitMessage);
-
-                                    if (firstVisitMessage === null && window.location.protocol !== "https:") { //this works better, I think!
-                                        //if (firstVisitMessage !== 'hide') {
-                                        $("#subscribe_link").trigger('click');
-                                        $.cookie('FirstVisit', 'hide', {
-                                            expires: 7,
-                                            path: '/'
-                                        });
-                                    }
-                                    else {
-
-                                    }
-
-                                });
-                            </script>
-                        </div>
-                    </div>
                     <div class="small-8 small-centered medium-3 medium-uncentered end large-2 columns text-center"
                          id="footer-social">
                         <ul class="small-block-grid-4">
                             <!--<li><a href="http://www.facebook.com/pages/Urban-Originals/10150092210335521"-->
-                                   <!--target="_blank" title="Follow Urban Originals on Facebook"><span-->
-                                    <!--class="fa fa-facebook"></span></a></li>-->
+                            <!--target="_blank" title="Follow Urban Originals on Facebook"><span-->
+                            <!--class="fa fa-facebook"></span></a></li>-->
                             <!--<li><a href="https://twitter.com/UrbanOriginals" target="_blank"><span class="fa fa-twitter"-->
-                                                                                                   <!--title="Follow Urban Originals on Twitter"></span></a>-->
+                            <!--title="Follow Urban Originals on Twitter"></span></a>-->
                             <!--</li>-->
                             <li><a href="https://www.instagram.com/beautylabnp/" target="_blank"><span
                                     class="fa fa-instagram" title="Follow Nadya on Instagram"></span></a></li>
                             <!--<li><a href="http://pinterest.com/urbanoriginals/" target="_blank"><span-->
-                                    <!--class="fa fa-pinterest" title="Follow Urban Originals on Pinterest"></span></a></li>-->
+                            <!--class="fa fa-pinterest" title="Follow Urban Originals on Pinterest"></span></a></li>-->
                         </ul>
                     </div>
                 </section>
@@ -391,9 +327,62 @@
         </footer>
     </div>
 </div>
-<script src="javascripts/responsive/foundation.min.js"></script>
+<script src="/javascripts/responsive/foundation.min.js"></script>
 <script>
     $(document).foundation();
 </script>
+
+
+<!-- Include external JS libs. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.pkgd.min.js"></script>
+
+<!-- Initialize the editor. -->
+<script> $(function () {
+    var source = $('#textSource').html().trim();
+    var textareaEditor = $('#textareaEditor');
+    textareaEditor.val(source);
+    textareaEditor.froalaEditor();
+    var topMenu = $('#topMenuId');
+    var footerMenu = $('#footerMenuId');
+    topMenu.prop('checked', topMenu.val());
+    footerMenu.prop('checked', footerMenu.val());
+
+    $('#saveData').on('click', function () {
+        var method = "POST";
+        var id = $('#Id').val();
+        var path = $('#pathId').val().trim();
+        var title = $('#titleId').val().trim();
+        var text = $('#textareaEditor').val().trim();
+        var topMenu = $('#topMenuId').is(':checked');
+        var footerMenu = $('#footerMenuId').is(':checked');
+        $.ajax({
+            method: method,
+            type: method,
+            url: "/api/page",
+            async: false,
+            data: {
+                id: id,
+                path: path,
+                title: title,
+                text: text,
+                topMenu: topMenu,
+                footerMenu: footerMenu,
+                _method: method
+            },
+            success: function (data) {
+                console.log(data);
+                window.location.href = "/?page=" + path;
+            }
+        });
+    })
+}); </script>
 </body>
 </html>

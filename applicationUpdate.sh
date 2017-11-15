@@ -7,7 +7,7 @@ cd /home/appuser/${APPLICATION_NAME};
 COMMIT=$(git log --pretty=format:'%h' -n 1);
 git pull;
 COMMIT_NEW=$(git log --pretty=format:'%h' -n 1);
-PID=$(ps -ef | grep ${APPLICATION_PACKAGE} | grep -v grep | awk '{ print $2 }')
+PID=$(ps -ef | grep "build/libs/"${APPLICATION_NAME} | grep -v grep | awk '{ print $2 }')
 
 function buildAndStartApplication {
     rm -rf build;

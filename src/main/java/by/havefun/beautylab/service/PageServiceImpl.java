@@ -13,8 +13,12 @@ import java.util.List;
 @Service
 public class PageServiceImpl implements PageService {
 
+    private final PageRepository repository;
+
     @Autowired
-    private PageRepository repository;
+    public PageServiceImpl(PageRepository repository) {
+        this.repository = repository;
+    }
 
 
     @Override
@@ -52,5 +56,22 @@ public class PageServiceImpl implements PageService {
     @Override
     public List<PageDto> getFooters() {
         return getPagesMenu(repository.findByFooterMenu(true));
+    }
+
+    @Override
+    public PageDto update(Long id, String path, String title, String text, Boolean topMenu, Boolean footerMenu) {
+        BeautyPage beautyPage = repository.findOne(id);
+        if (beautyPage == null) {
+            beautyPage = new BeautyPage();
+        }
+        beautyPage.setPath(path);
+        beautyPage.setText(text);
+        beautyPage.setTitle(title);
+        beautyPage.setTopMenu(topMenu);
+        beautyPage.setFooterMenu(footerMenu);
+        repository.save(beautyPage);
+        PageDto dto = new PageDto();
+        BeanUtils.copyProperties(beautyPage, dto);
+        return dto;
     }
 }
