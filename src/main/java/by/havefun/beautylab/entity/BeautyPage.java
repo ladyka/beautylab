@@ -19,7 +19,11 @@ public class BeautyPage extends BeautyAbstractEntity {
 
     private static final long serialVersionUID = 201711050016L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "beauty_page_id_seq")
+    @SequenceGenerator(
+            name="beauty_page_id_seq",
+            sequenceName="beauty_page_sequence"
+    )
     private Long id;
     private String path;
     private String title;

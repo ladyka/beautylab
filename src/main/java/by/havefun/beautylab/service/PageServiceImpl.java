@@ -60,9 +60,11 @@ public class PageServiceImpl implements PageService {
 
     @Override
     public PageDto update(Long id, String path, String title, String text, Boolean topMenu, Boolean footerMenu) {
-        BeautyPage beautyPage = repository.findOne(id);
-        if (beautyPage == null) {
+        BeautyPage beautyPage;
+        if (id == null) {
             beautyPage = new BeautyPage();
+        } else {
+            beautyPage = repository.findOne(id);
         }
         beautyPage.setPath(path);
         beautyPage.setText(text);

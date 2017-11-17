@@ -1,5 +1,5 @@
 group 'by.digital'
-version '0.0.1'
+version '0.0.2'
 buildscript {
 	ext {
 		springBootVersion = '1.5.6.RELEASE'
