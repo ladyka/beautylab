@@ -10,7 +10,7 @@
 
     <link type="text/css" href="StyleSheets/ModuleStyleSheets.css" rel="StyleSheet"/>
     <script type="text/javascript">var jslang = 'EN';</script>
-    <link rel="stylesheet" href="/cssimport/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prata|Open+Sans:300italic,400italic,600italic,700italic,400,600,300,700"
           rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive/foundation.css">
@@ -36,80 +36,6 @@
                      class="small-6 small-offset-3 medium-4 medium-offset-0 large-3 large-offset-0 columns small-text-center medium-text-left">
                     <a href="/"><img src="images/logo-new.png"
                                      alt="Urban Originals – Handbags, Wallets &amp; Clutches"> </a>
-                </div>
-                <div id="header-search" class="hide-for-small medium-4 medium-offset-4 large-offset-6 large-2 columns">
-                    <form name="catproductsform28167" method="post"
-                          action="http://www.uo.com.au/Default.aspx?A=ProductSearch&amp;ID=/search-results">
-                        <div class="form">
-                            <div class="item disappear">
-                                <label for="CAT_ProductCatalogue"></label>
-                                <br/>
-                                <select class="cat_dropdown_small" id="CAT_ProductCatalogue"
-                                        name="CAT_ProductCatalogue">
-                                    <option value="-1">-- All Catalogs --</option>
-                                    <option value="145445">shop</option>
-                                    <option value="147958">---Accessories</option>
-                                    <option value="150703">------belts</option>
-                                    <option value="160505">------Cosmetic Bags</option>
-                                    <option value="151867">------Jewellery</option>
-                                    <option value="153832">------Scarves</option>
-                                    <option value="173776">------shoulder</option>
-                                    <option value="147966">---bags</option>
-                                    <option value="150705">------overnight</option>
-                                    <option value="150396">------shoulder</option>
-                                    <option value="150706">------tote</option>
-                                    <option value="150708">---clutches</option>
-                                    <option value="173775">------shoulder</option>
-                                    <option value="150397">---latest arrivals</option>
-                                    <option value="147959">---sale</option>
-                                    <option value="147962">---wallets</option>
-                                    <option value="150707">------purses</option>
-                                    <option value="173777">------shoulder</option>
-                                    <option value="150704">------travel</option>
-                                </select>
-                            </div>
-                            <div class="item">
-
-
-                                <input placeholder="search" class="cat_textbox_small" type="text" id="CAT_ProductSearch"
-                                       name="CAT_ProductSearch" maxlength="255"/>
-
-                                <button type="submit" value="Search"><span class="fa fa-search"></span></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div id="header-cart"
-                     class="small-3 medium-4 medium-offset-4 large-1 large-offset-0 columns medium-text-right">
-                    <div id="catCartSummary" data-quote="False" data-vertical="False"
-                         data-templateName="/Layouts/OnlineShop/cart-summary.tpl"
-                         data-templateHash="mecUi3WMrL019BgwA3YGw6Bm+n4=">
-                        <div class="text-right" id="cart-empty-1">
-                            <div class="cart-summary empty-1">
-                                <div class="cart-summary-item">
-                                    <a href="OrderRetrievev2.aspx.html">
-      <span class="cart-icon-count shopping-bag">
-      <span class="fa fa-shopping-cart"></span><span class="cart-text"> Cart</span>
-      <span class="cart-summary-item-count"> (0)</span>
-      </span></a>
-                                </div>
-                            </div>
-                            <div class="cart-summary not-empty-1">
-                                <div class="cart-summary-item" id="cart-not-empty">
-                                    <a class="cart-summary-link shopping-bag"
-                                       href="OrderRetrievev2.aspx%3FCatalogueID=0.html" title="$0.00">
-        <span class="cart-icon-count">
-      <span class="fa fa-shopping-cart"></span><span class="cart-text"> Cart</span>
-        <span class="cart-summary-item-count"> (0)</span>
-        </span>
-                                        <span class="cart-amount hide-for-large-down">$0.00
-      </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
                 <nav id="main-nav" class="hide-for-small medium-10 medium-end large-7 large-pull-2 columns">
                     <div class="h-nav">
@@ -315,35 +241,6 @@
                                     ftypes[2] = 'text';
                                 }(jQuery));
                                 var $mcj = jQuery.noConflict(true);
-                            </script>
-                            <script>
-                                $(window).load(function () {
-
-                                    //using Foundation.reveal instead
-
-
-                                    // jQuery('#subscribe_link').click(function(){
-                                    //  jQuery('#subscribe_box').css('display','block')
-                                    // });
-                                    // jQuery('.close_subscribe').click(function(){
-                                    //  jQuery('#subscribe_box').css('display','none')
-                                    // });
-                                    var firstVisitMessage = $.cookie('FirstVisit');
-                                    //console.log(firstVisitMessage);
-
-                                    if (firstVisitMessage === null && window.location.protocol !== "https:") { //this works better, I think!
-                                        //if (firstVisitMessage !== 'hide') {
-                                        $("#subscribe_link").trigger('click');
-                                        $.cookie('FirstVisit', 'hide', {
-                                            expires: 7,
-                                            path: '/'
-                                        });
-                                    }
-                                    else {
-
-                                    }
-
-                                });
                             </script>
                         </div>
                     </div>

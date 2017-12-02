@@ -102,20 +102,7 @@ Header
     /*----------------------------------------------
 Main Nav
 ----------------------------------------------*/
-    
-    #main-nav {
 
-    }
-    @media screen and (min-width:73em){
-      #main-nav{
-        margin-top:-3.5em;
-      }
-      .past-header #main-nav{
-        margin-top:-3em;
-      }
-    }
-    #main-nav ul {}
-    
     .no-touch #main-nav .h-nav > div > ul > li {
       margin-right: .2em;
     }
