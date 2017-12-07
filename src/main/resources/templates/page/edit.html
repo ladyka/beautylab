@@ -185,23 +185,31 @@
         </header>
         <main id="content">
             <section class="row" id="page">
-                <div class="form-data">
-                    <input id="saveData" type="button" value="Save">
-                    Путь к странице
-                    <input id="pathId" type="text" th:value="${path}">
+                <form class="form-data">
                     <input id="Id" type="hidden" th:value="${page.id}">
-                    Заголовок
-                    <input id="titleId" type="text" th:value="${page.title}">
-                    Отображать в верхнем меню
-                    <input id="topMenuId" type="checkbox" th:value="${page.topMenu}">
-                    Отображать в нижнем меню
-                    <input id="footerMenuId" type="checkbox" th:value="${page.footerMenu}">
-                </div>
+                    <button id="saveData" type="submit" class="btn btn-default">Submit</button>
+                    <textarea id="textareaEditor"></textarea>
+                    <div class="form-group">
+                        <label for="pathId">Путь к странице</label>
+                        <input id="pathId" type="text" th:value="${path}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="titleId">Заголовок</label>
+                        <input id="titleId" type="text" th:value="${page.title}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="topMenuId">Отображать в верхнем меню</label>
+                        <input id="topMenuId" type="checkbox" th:value="${page.topMenu} ? 'checked':''" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="footerMenuId">Отображать в нижнем меню</label>
+                        <input id="footerMenuId" type="checkbox" th:value="${page.footerMenu} ? 'checked':''" class="form-control">
+                    </div>
+                </form>
                 <div class="small-12 columns" id="page-content">
                     <div style="display: none" id="textSource" width="0" height="0ё">
                         <span th:utext="${page.text}" th:remove="tag">TEXT TEXT</span>
                     </div>
-                    <textarea id="textareaEditor"></textarea>
                 </div>
             </section>
 

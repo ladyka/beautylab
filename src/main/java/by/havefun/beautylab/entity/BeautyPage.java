@@ -1,5 +1,6 @@
 package by.havefun.beautylab.entity;
 
+import by.havefun.beautylab.dto.PageDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,8 +22,8 @@ public class BeautyPage extends BeautyAbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "beauty_page_id_seq")
     @SequenceGenerator(
-            name="beauty_page_id_seq",
-            sequenceName="beauty_page_sequence"
+            name = "beauty_page_id_seq",
+            sequenceName = "beauty_page_sequence"
     )
     private Long id;
     private String path;
@@ -30,4 +31,12 @@ public class BeautyPage extends BeautyAbstractEntity {
     private String text;
     private Boolean topMenu;
     private Boolean footerMenu;
+
+    public PageDto toPageDTO() {
+        PageDto dto = new PageDto();
+        dto.setPath(getPath());
+        dto.setTitle(getTitle());
+        dto.setText(getText());
+        return dto;
+    }
 }

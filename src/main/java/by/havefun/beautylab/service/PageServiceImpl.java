@@ -7,8 +7,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PageServiceImpl implements PageService {
@@ -35,17 +36,9 @@ public class PageServiceImpl implements PageService {
     }
 
     private List<PageDto> getPagesMenu(List<BeautyPage> menuPages) {
-        List<PageDto> menus = new ArrayList<>();
-        if (menuPages != null) {
-            menuPages.forEach(beautyPage -> {
-                PageDto dto = new PageDto();
-                dto.setPath(beautyPage.getPath());
-                dto.setTitle(beautyPage.getTitle());
-                dto.setText(beautyPage.getText());
-                menus.add(dto);
-            });
-        }
-        return menus;
+        return (menuPages == null) ? Collections.emptyList() :
+                menuPages.stream().map(BeautyPage::toPageDTO).collect(Collectors.toList());
+
     }
 
     @Override
@@ -60,20 +53,13 @@ public class PageServiceImpl implements PageService {
 
     @Override
     public PageDto update(Long id, String path, String title, String text, Boolean topMenu, Boolean footerMenu) {
-        BeautyPage beautyPage;
-        if (id == null) {
-            beautyPage = new BeautyPage();
-        } else {
-            beautyPage = repository.findOne(id);
-        }
+        BeautyPage beautyPage = (id == null) ? new BeautyPage() : repository.findOne(id);
         beautyPage.setPath(path);
         beautyPage.setText(text);
         beautyPage.setTitle(title);
         beautyPage.setTopMenu(topMenu);
         beautyPage.setFooterMenu(footerMenu);
         repository.save(beautyPage);
-        PageDto dto = new PageDto();
-        BeanUtils.copyProperties(beautyPage, dto);
-        return dto;
+        return beautyPage.toPageDTO();
     }
 }
